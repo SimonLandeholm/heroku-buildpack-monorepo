@@ -19,6 +19,8 @@ fi
 APP_BASE="$(cat "${ENV_DIR}/APP_BASE")"
 
 (
+    rm -rf ${BUILD_DIR}/backend/common &&
+    cp "${BUILD_DIR}/common" "${BUILD_DIR}/backend/common" &&
     mv "${BUILD_DIR}/${APP_BASE}" "${STAGE}" &&
     rm -rf "${BUILD_DIR}"/* &&
     mv "${STAGE}/$(basename "$APP_BASE")"/* "${BUILD_DIR}"
