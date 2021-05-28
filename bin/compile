@@ -19,8 +19,6 @@ fi
 APP_BASE="$(cat "${ENV_DIR}/APP_BASE")"
 
 (
-    rm -rf ${BUILD_DIR}/backend/tmt-evaluator &&
-    mv "${BUILD_DIR}/tmt-evaluator" "${BUILD_DIR}/backend/tmt-evaluator" &&
     rm -rf ${BUILD_DIR}/backend/common &&
     mv "${BUILD_DIR}/common" "${BUILD_DIR}/backend/common" &&
     mv "${BUILD_DIR}/${APP_BASE}" "${STAGE}" &&
